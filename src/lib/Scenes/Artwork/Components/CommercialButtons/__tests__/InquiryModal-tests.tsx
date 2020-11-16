@@ -36,6 +36,10 @@ const FakeApp = (props: InquiryModalTestsQueryResponse) => {
       artwork={props!.artwork!}
       modalIsVisible={modalProps.modalIsVisible}
       toggleVisibility={modalProps.toggleVisibility}
+      toggleNotification={() => {
+        return null
+      }}
+      notificationVisible
     />
   )
 }

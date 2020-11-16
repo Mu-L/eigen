@@ -5,15 +5,15 @@ export const SubmitInquiryRequest = (
   environment: Environment,
   inquireable: any,
   payload: any,
+  setMutationSuccessful: (arg0: boolean) => void,
   showErrorMessage?: any
 ) => {
   return commitMutation<SubmitInquiryRequestMutation>(environment, {
     onError: () => {
-      // Show error state
       showErrorMessage(true)
     },
     onCompleted: () => {
-      // Show delayed comfirmation notification
+      setMutationSuccessful(true)
     },
     variables: {
       input: {
